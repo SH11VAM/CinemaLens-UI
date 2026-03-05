@@ -25,9 +25,9 @@ export default function page() {
   const [inputError, setInputError] = useState("");
   const [loading, setLoading] = useState(false);
   const [loadingPhase, setLoadingPhase] = useState("");
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState<any | null>(null);
   const [sentiment, setSentiment] = useState(null);
-  const [error, setError] = useState(null);
+  const [error, setError] = useState(null);     
 
   const validate = (val:any) => {
     if (!val.trim()) return "Please enter an IMDb ID (e.g. tt0133093)";
@@ -83,7 +83,7 @@ export default function page() {
       <SearchBar
         value={inputId}
         onChange={(v:any) => { setInputId(v); setInputError(""); }}
-        onSearch={handleSearch}
+        onSearch={() => handleSearch(undefined)}
         error={inputError}
         loading={loading}
       />
