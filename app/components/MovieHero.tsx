@@ -1,6 +1,6 @@
 import React from "react";
 
-function MovieHero({ movie }) {
+function MovieHero({ movie }: { movie: any }) {
   return (
     <div className="movie-hero">
       <div className="poster-wrap">
@@ -16,7 +16,7 @@ function MovieHero({ movie }) {
           {movie.year && <span className="badge badge-year">{movie.year}</span>}
           {movie.rated && <span className="badge badge-rated">{movie.rated}</span>}
           {movie.runtime && <span className="badge badge-genre">{movie.runtime}</span>}
-          {movie.genre?.slice(0, 2).map((g) => (
+          {movie.genre?.slice(0, 2).map((g: string) => (
             <span key={g} className="badge badge-genre">{g}</span>
           ))}
         </div>

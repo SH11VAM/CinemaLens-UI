@@ -1,11 +1,11 @@
 import React from "react";
 
-export function RatingsSection({ ratings }) {
+export function RatingsSection({ ratings }: { ratings: any[] }) {
   return (
     <div className="section">
       <div className="section-title">Critic Ratings</div>
       <div className="ratings-list">
-        {ratings.map((r) => (
+        {ratings.map((r: any) => (
           <div key={r.Source} className="rating-source">
             <span className="rating-source-name">
               {r.Source.replace("Internet Movie Database", "IMDb")
@@ -20,7 +20,7 @@ export function RatingsSection({ ratings }) {
   );
 }
 
-export function DetailsSection({ movie }) {
+export function DetailsSection({ movie }: { movie: any }) {
   const fields = [
     ["Country",    movie.country],
     ["Language",   movie.language],

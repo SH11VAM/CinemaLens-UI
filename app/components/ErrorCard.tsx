@@ -1,6 +1,6 @@
 import React from "react";
 
-function ErrorCard({ message }) {
+function ErrorCard({ message }: { message: string }) {
   return (
     <div className="error-card">
       <div className="error-icon">🎬</div>

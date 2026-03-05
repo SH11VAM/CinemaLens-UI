@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function SentimentBars({ pos, neu, neg }) {
+function SentimentBars({ pos, neu, neg }: { pos: number, neu: number, neg: number }) {
   const [widths, setWidths] = useState({ pos: 0, neu: 0, neg: 0 });
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function SentimentBars({ pos, neu, neg }) {
   );
 }
 
-function SentimentSection({ sentiment }) {
+function SentimentSection({ sentiment }: { sentiment: any }) {
   if (!sentiment) {
     return (
       <div className="section">
@@ -64,7 +64,7 @@ function SentimentSection({ sentiment }) {
 
       {sentiment.highlights?.length > 0 && (
         <div className="highlights">
-          {sentiment.highlights.map((h, i) => (
+          {sentiment.highlights.map((h: string, i: number) => (
             <div key={i} className="highlight-item">
               <span className="highlight-dot">◆</span>
               <span>{h}</span>

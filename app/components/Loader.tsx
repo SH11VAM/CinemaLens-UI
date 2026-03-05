@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Loader({ phase }) {
+export function Loader({ phase }: { phase: string }) {
   return (
     <div className="loader">
       <div className="loader-ring" />
@@ -9,7 +9,7 @@ export function Loader({ phase }) {
   );
 }
 
-export function ErrorCard({ message }) {
+export function ErrorCard({ message }: { message: string }) {
   return (
     <div className="error-card">
       <div className="error-icon">🎬</div>

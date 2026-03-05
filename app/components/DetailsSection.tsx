@@ -1,6 +1,6 @@
 import React from "react";
 
-function DetailsSection({ movie }) {
+function DetailsSection({ movie } : { movie: any }) {
   const fields = [
     ["Country",    movie.country],
     ["Language",   movie.language],
