@@ -4,6 +4,8 @@
 
 Built with **Next.js 14**, **Express.js**, **OpenRouter AI**, and the **OMDb API**.
 
+
+
 ---
 
 ## 🚀 Getting Started
