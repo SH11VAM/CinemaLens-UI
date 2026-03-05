@@ -1,4 +1,4 @@
-# 🎬 CinemaLens(https://cinema-lens.vercel.app/)
+# 🎬 CinemaLens(https://cinemalens.vercel.app/)
 
 **AI-Powered IMDb Movie Analyzer** — Enter any IMDb ID and get movie details, cast, ratings & AI-generated audience sentiment analysis.
 
