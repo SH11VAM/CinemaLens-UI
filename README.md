@@ -1,4 +1,4 @@
-# 🎬 CinemaLens
+# 🎬 CinemaLens(https://cinema-lens.vercel.app/)
 
 **AI-Powered IMDb Movie Analyzer** — Enter any IMDb ID and get movie details, cast, ratings & AI-generated audience sentiment analysis.
 
@@ -17,28 +17,29 @@ Built with **Next.js 14**, **Express.js**, **OpenRouter AI**, and the **OMDb API
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/your-username/cinemalens.git
-cd cinemalens
+# Frontend
+git clone https://github.com/SH11VAM/CinemaLens-UI.git
+cd CinemaLens-UI
+
+# Backend
+git clone https://github.com/SH11VAM/CinemaLens-server.git
+cd CinemaLens-server
 ```
 
 ### 2. Setup the backend
 
 ```bash
-cd backend
-cp .env.example .env
 # Fill in your API keys in .env
-npm install
+pnpm install
 npm run dev        # runs on http://localhost:5000
 ```
 
 ### 3. Setup the frontend
 
 ```bash
-cd frontend
-cp .env.example .env
 # .env already points to http://localhost:5000
-npm install
-npm run dev        # runs on http://localhost:3000
+pnpm install
+pnpm run dev        # runs on http://localhost:3000
 ```
 
 Open [http://localhost:3000](http://localhost:3000) in your browser.
@@ -146,25 +147,6 @@ curl http://localhost:5000/api/movie/tt0133093
 
 ---
 
-## 🌐 Deployment
-
-### Backend → [Render](https://render.com) (free tier)
-
-1. Create a new **Web Service** on Render
-2. Connect your GitHub repo, set root to `backend/`
-3. Build command: `npm install`
-4. Start command: `node server.js`
-5. Add all environment variables from `backend/.env`
-6. Copy your Render URL for the frontend config
-
-### Frontend → [Vercel](https://vercel.com) (free tier)
-
-1. Import your repo on Vercel
-2. Set root directory to `frontend/`
-3. Add env variable: `REACT_APP_API_URL` = your Render backend URL
-4. Click **Deploy**
-
----
 
 ## ✨ Features
 
