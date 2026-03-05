@@ -1,6 +1,6 @@
 import React from "react";
 
-function CastSection({ movie }) {
+function CastSection({ movie }: { movie: any }) {
   const { actors = [], writers = [], director } = movie;
   const directors = director ? director.split(", ") : [];
 
@@ -8,19 +8,19 @@ function CastSection({ movie }) {
     <div className="section">
       <div className="section-title">Cast &amp; Crew</div>
       <div className="cast-grid">
-        {actors.map((actor) => (
+        {actors.map((actor: string) => (
           <div key={actor} className="cast-chip">
             {actor}
             <strong>Actor</strong>
           </div>
         ))}
-        {writers.slice(0, 2).map((w) => (
+        {writers.slice(0, 2).map((w: string ) => (
           <div key={w} className="cast-chip">
             {w}
             <strong>Writer</strong>
           </div>
         ))}
-        {directors.map((d) => (
+        {directors.map((d: string) => (
           <div key={d} className="cast-chip">
             {d}
             <strong>Director</strong>
